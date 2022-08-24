@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **administrative_area_level_3** | **string** |  | [optional]
 **administrative_area_level_1** | **string** |  | [optional]
 **street_number** | **string** |  | [optional]
-**location** | [**\OpenAPI\Client\Model\V1AvailabilitySearchPost200ResponseListInnerGeoLocation**](V1AvailabilitySearchPost200ResponseListInnerGeoLocation.md) |  | [optional]
+**location** | [**\com.lodgea\com.lodgea.model\V1AvailabilitySearchPost200ResponseListInnerGeoLocation**](V1AvailabilitySearchPost200ResponseListInnerGeoLocation.md) |  | [optional]
 **state_code** | **string** |  | [optional]
 **postal_code** | **string** |  | [optional]
 **natural_feature** | **string** |  | [optional]

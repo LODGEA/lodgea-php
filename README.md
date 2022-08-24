@@ -50,18 +50,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+$config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+// $config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AvailabilityApi(
+$apiInstance = new com.lodgea\Api\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$availability_search = new \OpenAPI\Client\Model\AvailabilitySearch(); // \OpenAPI\Client\Model\AvailabilitySearch | Search Criteria, all parameters are optional
+$availability_search = new \com.lodgea\com.lodgea.model\AvailabilitySearch(); // \com.lodgea\com.lodgea.model\AvailabilitySearch | Search Criteria, all parameters are optional
 
 try {
     $result = $apiInstance->v1AvailabilitySearchPost($availability_search);

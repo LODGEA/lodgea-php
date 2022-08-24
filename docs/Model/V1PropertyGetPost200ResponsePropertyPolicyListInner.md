@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **cancellation_policy_list** | **string[]** |  | [optional]
 **advance_booking_min** | **float** |  | [optional]
 **advance_booking_max** | **float** |  | [optional]
-**pets_policy** | [**\OpenAPI\Client\Model\V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy**](V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy.md) |  | [optional]
+**pets_policy** | [**\com.lodgea\com.lodgea.model\V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy**](V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy.md) |  | [optional]
 **prepayment_policy** | **string** |  | [optional]
 **guarantee_policy** | **string** |  | [optional]
-**tax_policy_list** | [**\OpenAPI\Client\Model\V1PropertyGetPost200ResponsePropertyPolicyListInnerTaxPolicyListInner[]**](V1PropertyGetPost200ResponsePropertyPolicyListInnerTaxPolicyListInner.md) |  | [optional]
+**tax_policy_list** | [**\com.lodgea\com.lodgea.model\V1PropertyGetPost200ResponsePropertyPolicyListInnerTaxPolicyListInner[]**](V1PropertyGetPost200ResponsePropertyPolicyListInnerTaxPolicyListInner.md) |  | [optional]
 **fee_policy_list** | **string[]** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

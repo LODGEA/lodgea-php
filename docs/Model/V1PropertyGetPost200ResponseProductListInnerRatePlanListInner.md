@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **code** | **string** |  | [optional]
 **property_id** | **string** |  | [optional]
-**pricing_list** | [**\OpenAPI\Client\Model\V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner[]**](V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner.md) |  | [optional]
+**pricing_list** | [**\com.lodgea\com.lodgea.model\V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner[]**](V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,4 +1,4 @@
-# OpenAPI\Client\PropertyApi
+# com.lodgea\PropertyApi
 
 All URIs are relative to https://api.eu.lodgea.io.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `v1PropertyGetPost()`
 
 ```php
-v1PropertyGetPost($property_get): \OpenAPI\Client\Model\V1PropertyGetPost200Response
+v1PropertyGetPost($property_get): \com.lodgea\com.lodgea.model\V1PropertyGetPost200Response
 ```
 
 Get Property by ID
@@ -25,18 +25,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+$config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+// $config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PropertyApi(
+$apiInstance = new com.lodgea\Api\PropertyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$property_get = new \OpenAPI\Client\Model\PropertyGet(); // \OpenAPI\Client\Model\PropertyGet | Provide the property ID to get more information about it
+$property_get = new \com.lodgea\com.lodgea.model\PropertyGet(); // \com.lodgea\com.lodgea.model\PropertyGet | Provide the property ID to get more information about it
 
 try {
     $result = $apiInstance->v1PropertyGetPost($property_get);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **property_get** | [**\OpenAPI\Client\Model\PropertyGet**](../Model/PropertyGet.md)| Provide the property ID to get more information about it |
+ **property_get** | [**\com.lodgea\com.lodgea.model\PropertyGet**](../Model/PropertyGet.md)| Provide the property ID to get more information about it |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\V1PropertyGetPost200Response**](../Model/V1PropertyGetPost200Response.md)
+[**\com.lodgea\com.lodgea.model\V1PropertyGetPost200Response**](../Model/V1PropertyGetPost200Response.md)
 
 ### Authorization
 

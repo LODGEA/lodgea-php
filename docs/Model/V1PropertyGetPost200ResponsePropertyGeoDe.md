@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location** | [**\OpenAPI\Client\Model\V1PropertyGetPost200ResponsePropertyGeoDeLocation**](V1PropertyGetPost200ResponsePropertyGeoDeLocation.md) |  | [optional]
+**location** | [**\com.lodgea\com.lodgea.model\V1PropertyGetPost200ResponsePropertyGeoDeLocation**](V1PropertyGetPost200ResponsePropertyGeoDeLocation.md) |  | [optional]
 **formatted_address** | **string** |  | [optional]
 **place_id** | **string** |  | [optional]
 **locality** | **string** |  | [optional]

@@ -1,4 +1,4 @@
-# OpenAPI\Client\LocationApi
+# com.lodgea\LocationApi
 
 All URIs are relative to https://api.eu.lodgea.io.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `v1LocationSearchPost()`
 
 ```php
-v1LocationSearchPost($location_search): \OpenAPI\Client\Model\V1LocationSearchPost200Response
+v1LocationSearchPost($location_search): \com.lodgea\com.lodgea.model\V1LocationSearchPost200Response
 ```
 
 Search for Location
@@ -25,18 +25,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+$config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+// $config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LocationApi(
+$apiInstance = new com.lodgea\Api\LocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$location_search = new \OpenAPI\Client\Model\LocationSearch(); // \OpenAPI\Client\Model\LocationSearch | Free-text search criteria
+$location_search = new \com.lodgea\com.lodgea.model\LocationSearch(); // \com.lodgea\com.lodgea.model\LocationSearch | Free-text search criteria
 
 try {
     $result = $apiInstance->v1LocationSearchPost($location_search);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **location_search** | [**\OpenAPI\Client\Model\LocationSearch**](../Model/LocationSearch.md)| Free-text search criteria |
+ **location_search** | [**\com.lodgea\com.lodgea.model\LocationSearch**](../Model/LocationSearch.md)| Free-text search criteria |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\V1LocationSearchPost200Response**](../Model/V1LocationSearchPost200Response.md)
+[**\com.lodgea\com.lodgea.model\V1LocationSearchPost200Response**](../Model/V1LocationSearchPost200Response.md)
 
 ### Authorization
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **is_main_image** | **bool** |  | [optional]
 **sort_order** | **float** |  | [optional]
 **url** | **string** |  | [optional]
-**tag_list** | [**\OpenAPI\Client\Model\V1PropertyGetPost200ResponsePropertyMediaListInnerTagListInner[]**](V1PropertyGetPost200ResponsePropertyMediaListInnerTagListInner.md) |  | [optional]
+**tag_list** | [**\com.lodgea\com.lodgea.model\V1PropertyGetPost200ResponsePropertyMediaListInnerTagListInner[]**](V1PropertyGetPost200ResponsePropertyMediaListInnerTagListInner.md) |  | [optional]
 **moderation_label_list** | **string[]** |  | [optional]
 **detection_label_list** | **string[]** |  | [optional]
 **property_amenity_list** | **string[]** |  | [optional]
