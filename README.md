@@ -161,7 +161,7 @@ vendor/bin/phpunit
 
 ## Author
 
-info@lodgea.com
+support@lodgea.com
 
 ## About this package
 
