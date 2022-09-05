@@ -1,6 +1,6 @@
 # lodgea-php
 
-LODGEA SDK for PHP. Check out https://lodgea.redoc.ly for more information.
+LODGEA SDK for PHP. Check out https://docs.lodgea.io for more information.
 
 
 ## Installation & Usage
