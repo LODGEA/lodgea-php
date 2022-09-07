@@ -58,7 +58,9 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'search_text' => 'string'
+        'search_text' => 'string',
+        'currency_code' => 'string',
+        'language_code' => 'string'
     ];
 
     /**
@@ -69,7 +71,9 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'search_text' => null
+        'search_text' => null,
+        'currency_code' => null,
+        'language_code' => null
     ];
 
     /**
@@ -99,7 +103,9 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'search_text' => 'searchText'
+        'search_text' => 'searchText',
+        'currency_code' => 'currencyCode',
+        'language_code' => 'languageCode'
     ];
 
     /**
@@ -108,7 +114,9 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'search_text' => 'setSearchText'
+        'search_text' => 'setSearchText',
+        'currency_code' => 'setCurrencyCode',
+        'language_code' => 'setLanguageCode'
     ];
 
     /**
@@ -117,7 +125,9 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'search_text' => 'getSearchText'
+        'search_text' => 'getSearchText',
+        'currency_code' => 'getCurrencyCode',
+        'language_code' => 'getLanguageCode'
     ];
 
     /**
@@ -178,6 +188,8 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['search_text'] = $data['search_text'] ?? null;
+        $this->container['currency_code'] = $data['currency_code'] ?? null;
+        $this->container['language_code'] = $data['language_code'] ?? null;
     }
 
     /**
@@ -189,9 +201,6 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['search_text'] === null) {
-            $invalidProperties[] = "'search_text' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -210,7 +219,7 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets search_text
      *
-     * @return string
+     * @return string|null
      */
     public function getSearchText()
     {
@@ -220,13 +229,61 @@ class LocationSearch implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets search_text
      *
-     * @param string $search_text search_text
+     * @param string|null $search_text search_text
      *
      * @return self
      */
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_code
+     *
+     * @return string|null
+     */
+    public function getCurrencyCode()
+    {
+        return $this->container['currency_code'];
+    }
+
+    /**
+     * Sets currency_code
+     *
+     * @param string|null $currency_code currency_code
+     *
+     * @return self
+     */
+    public function setCurrencyCode($currency_code)
+    {
+        $this->container['currency_code'] = $currency_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets language_code
+     *
+     * @return string|null
+     */
+    public function getLanguageCode()
+    {
+        return $this->container['language_code'];
+    }
+
+    /**
+     * Sets language_code
+     *
+     * @param string|null $language_code language_code
+     *
+     * @return self
+     */
+    public function setLanguageCode($language_code)
+    {
+        $this->container['language_code'] = $language_code;
 
         return $this;
     }
