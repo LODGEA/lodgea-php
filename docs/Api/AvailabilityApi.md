@@ -4,8 +4,71 @@ All URIs are relative to https://api.eu.lodgea.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v1AvailabilityGetPost()**](AvailabilityApi.md#v1AvailabilityGetPost) | **POST** /v1/availability/get | Get Availability for Property
 [**v1AvailabilitySearchPost()**](AvailabilityApi.md#v1AvailabilitySearchPost) | **POST** /v1/availability/search | Search for Availability
 
+
+## `v1AvailabilityGetPost()`
+
+```php
+v1AvailabilityGetPost($availability_get): \com.lodgea\com.lodgea.model\V1AvailabilityGetPost200Response
+```
+
+Get Availability for Property
+
+Get availability information based on a specific property.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKeyAuth
+$config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKey('apiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
+
+
+$apiInstance = new com.lodgea\Api\AvailabilityApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$availability_get = new \com.lodgea\com.lodgea.model\AvailabilityGet(); // \com.lodgea\com.lodgea.model\AvailabilityGet | Availability get parameter
+
+try {
+    $result = $apiInstance->v1AvailabilityGetPost($availability_get);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AvailabilityApi->v1AvailabilityGetPost: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **availability_get** | [**\com.lodgea\com.lodgea.model\AvailabilityGet**](../Model/AvailabilityGet.md)| Availability get parameter |
+
+### Return type
+
+[**\com.lodgea\com.lodgea.model\V1AvailabilityGetPost200Response**](../Model/V1AvailabilityGetPost200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `v1AvailabilitySearchPost()`
 
