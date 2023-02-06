@@ -55,84 +55,102 @@ $config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKey('apiKey
 // $config = com.lodgea\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apiKey', 'Bearer');
 
 
-$apiInstance = new com.lodgea\Api\DefaultApi(
+$apiInstance = new com.lodgea\Api\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$availability_search_post_request = new \com.lodgea\com.lodgea.model\AvailabilitySearchPostRequest(); // \com.lodgea\com.lodgea.model\AvailabilitySearchPostRequest
+$availability_get = new \com.lodgea\com.lodgea.model\AvailabilityGet(); // \com.lodgea\com.lodgea.model\AvailabilityGet | Availability get parameter
 
 try {
-    $result = $apiInstance->availabilitySearchPost($availability_search_post_request);
+    $result = $apiInstance->v1AvailabilityGetPost($availability_get);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->availabilitySearchPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AvailabilityApi->v1AvailabilityGetPost: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
 
 ## API Endpoints
 
-All URIs are relative to *https://api.eu.lodgea.io/v1*
+All URIs are relative to *https://api.eu.lodgea.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**availabilitySearchPost**](docs/Api/DefaultApi.md#availabilitysearchpost) | **POST** /availability/search | Search for availability
-*DefaultApi* | [**locationSearchPost**](docs/Api/DefaultApi.md#locationsearchpost) | **POST** /location/search | Search for location
-*DefaultApi* | [**propertiesGet**](docs/Api/DefaultApi.md#propertiesget) | **GET** /properties | List (filtered) properties
-*DefaultApi* | [**propertiesPropertyIdAvailabilityGet**](docs/Api/DefaultApi.md#propertiespropertyidavailabilityget) | **GET** /properties/{propertyId}/availability | Get a properties availability
-*DefaultApi* | [**propertiesPropertyIdGet**](docs/Api/DefaultApi.md#propertiespropertyidget) | **GET** /properties/{propertyId} | Get a properties details
+*AvailabilityApi* | [**v1AvailabilityGetPost**](docs/Api/AvailabilityApi.md#v1availabilitygetpost) | **POST** /v1/availability/get | Get Availability for Property
+*AvailabilityApi* | [**v1AvailabilitySearchPost**](docs/Api/AvailabilityApi.md#v1availabilitysearchpost) | **POST** /v1/availability/search | Search for Availability
+*LocationApi* | [**v1LocationSearchPost**](docs/Api/LocationApi.md#v1locationsearchpost) | **POST** /v1/location/search | Search for Location
+*PropertyApi* | [**v1PropertyGetPost**](docs/Api/PropertyApi.md#v1propertygetpost) | **POST** /v1/property/get | Get Property by ID
+*PropertyApi* | [**v1PropertyListPost**](docs/Api/PropertyApi.md#v1propertylistpost) | **POST** /v1/property/list | List properties by a specific keyword
 
 ## Models
 
-- [AvailabilitySearchPost200Response](docs/Model/AvailabilitySearchPost200Response.md)
-- [AvailabilitySearchPostRequest](docs/Model/AvailabilitySearchPostRequest.md)
-- [AvailablePropertiesInner](docs/Model/AvailablePropertiesInner.md)
-- [AvailablePropertiesInner1](docs/Model/AvailablePropertiesInner1.md)
-- [AvailablePropertiesInner1AttractionListInner](docs/Model/AvailablePropertiesInner1AttractionListInner.md)
-- [AvailablePropertiesInner1AttractionListInnerDistance](docs/Model/AvailablePropertiesInner1AttractionListInnerDistance.md)
-- [AvailablePropertiesInner1Geo](docs/Model/AvailablePropertiesInner1Geo.md)
-- [AvailablePropertiesInner1GeoLocation](docs/Model/AvailablePropertiesInner1GeoLocation.md)
-- [AvailablePropertiesInner1LowestPrice](docs/Model/AvailablePropertiesInner1LowestPrice.md)
-- [AvailablePropertiesInner1MediaListInner](docs/Model/AvailablePropertiesInner1MediaListInner.md)
-- [LocationSearchPost200Response](docs/Model/LocationSearchPost200Response.md)
-- [LocationSearchPost400Response](docs/Model/LocationSearchPost400Response.md)
-- [LocationSearchPost400ResponseValidationErrorsInner](docs/Model/LocationSearchPost400ResponseValidationErrorsInner.md)
-- [LocationSearchPostRequest](docs/Model/LocationSearchPostRequest.md)
-- [PropertiesGet200Response](docs/Model/PropertiesGet200Response.md)
-- [PropertiesGet200ResponseListInner](docs/Model/PropertiesGet200ResponseListInner.md)
-- [PropertiesPropertyIdAvailabilityGet200Response](docs/Model/PropertiesPropertyIdAvailabilityGet200Response.md)
-- [PropertiesPropertyIdAvailabilityGet200ResponseAvailabilityListInner](docs/Model/PropertiesPropertyIdAvailabilityGet200ResponseAvailabilityListInner.md)
-- [PropertiesPropertyIdGet200Response](docs/Model/PropertiesPropertyIdGet200Response.md)
-- [PropertiesPropertyIdGet200ResponseProductListInner](docs/Model/PropertiesPropertyIdGet200ResponseProductListInner.md)
-- [PropertiesPropertyIdGet200ResponseProductListInnerPolicyInfo](docs/Model/PropertiesPropertyIdGet200ResponseProductListInnerPolicyInfo.md)
-- [PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInner](docs/Model/PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInner.md)
-- [PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInnerPricingListInner](docs/Model/PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInnerPricingListInner.md)
-- [PropertiesPropertyIdGet200ResponseProperty](docs/Model/PropertiesPropertyIdGet200ResponseProperty.md)
-- [PropertiesPropertyIdGet200ResponsePropertyAwardListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyAwardListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyCancellationGracePeriod](docs/Model/PropertiesPropertyIdGet200ResponsePropertyCancellationGracePeriod.md)
-- [PropertiesPropertyIdGet200ResponsePropertyContactListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyContactListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyContactListInnerAddressListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyContactListInnerAddressListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyFacilityInfo](docs/Model/PropertiesPropertyIdGet200ResponsePropertyFacilityInfo.md)
-- [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerAmenityListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerAmenityListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMessageListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMessageListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyGuestInfo](docs/Model/PropertiesPropertyIdGet200ResponsePropertyGuestInfo.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPolicyListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPolicyListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerCancellationPolicyListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerCancellationPolicyListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerFeePolicyListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerFeePolicyListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerGuaranteePolicy](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerGuaranteePolicy.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerPetsPolicy](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerPetsPolicy.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerTaxPolicyListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerTaxPolicyListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPropertyInfo](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPropertyInfo.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPropertyInfoAcceptedPaymentListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPropertyInfoAcceptedPaymentListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyPropertyInfoMessageListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyPropertyInfoMessageListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyRecordCreated](docs/Model/PropertiesPropertyIdGet200ResponsePropertyRecordCreated.md)
-- [PropertiesPropertyIdGet200ResponsePropertyRecordModified](docs/Model/PropertiesPropertyIdGet200ResponsePropertyRecordModified.md)
-- [PropertiesPropertyIdGet200ResponsePropertyServiceListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyServiceListInner.md)
-- [PropertiesPropertyIdGet200ResponsePropertyServiceListInnerOperationTimeListInner](docs/Model/PropertiesPropertyIdGet200ResponsePropertyServiceListInnerOperationTimeListInner.md)
+- [AvailabilityGet](docs/Model/AvailabilityGet.md)
+- [AvailabilitySearch](docs/Model/AvailabilitySearch.md)
+- [LocationSearch](docs/Model/LocationSearch.md)
+- [PropertyGet](docs/Model/PropertyGet.md)
+- [PropertyList](docs/Model/PropertyList.md)
+- [V1AvailabilityGetPost200Response](docs/Model/V1AvailabilityGetPost200Response.md)
+- [V1AvailabilityGetPost200ResponseRatePlanListInner](docs/Model/V1AvailabilityGetPost200ResponseRatePlanListInner.md)
+- [V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInner](docs/Model/V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInner.md)
+- [V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInnerPriceList](docs/Model/V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInnerPriceList.md)
+- [V1AvailabilityGetPost200ResponseRoomTypeListInner](docs/Model/V1AvailabilityGetPost200ResponseRoomTypeListInner.md)
+- [V1AvailabilitySearchPost200Response](docs/Model/V1AvailabilitySearchPost200Response.md)
+- [V1AvailabilitySearchPost200ResponseListInner](docs/Model/V1AvailabilitySearchPost200ResponseListInner.md)
+- [V1AvailabilitySearchPost200ResponseListInnerAttractionListInner](docs/Model/V1AvailabilitySearchPost200ResponseListInnerAttractionListInner.md)
+- [V1AvailabilitySearchPost200ResponseListInnerAttractionListInnerDistance](docs/Model/V1AvailabilitySearchPost200ResponseListInnerAttractionListInnerDistance.md)
+- [V1AvailabilitySearchPost200ResponseListInnerGeo](docs/Model/V1AvailabilitySearchPost200ResponseListInnerGeo.md)
+- [V1AvailabilitySearchPost200ResponseListInnerGeoLocation](docs/Model/V1AvailabilitySearchPost200ResponseListInnerGeoLocation.md)
+- [V1AvailabilitySearchPost200ResponseListInnerLowestPrice](docs/Model/V1AvailabilitySearchPost200ResponseListInnerLowestPrice.md)
+- [V1AvailabilitySearchPost200ResponseListInnerMediaListInner](docs/Model/V1AvailabilitySearchPost200ResponseListInnerMediaListInner.md)
+- [V1LocationSearchPost200Response](docs/Model/V1LocationSearchPost200Response.md)
+- [V1LocationSearchPost200ResponseListInner](docs/Model/V1LocationSearchPost200ResponseListInner.md)
+- [V1PropertyGetPost200Response](docs/Model/V1PropertyGetPost200Response.md)
+- [V1PropertyGetPost200ResponseProductListInner](docs/Model/V1PropertyGetPost200ResponseProductListInner.md)
+- [V1PropertyGetPost200ResponseProductListInnerMealPlanListInner](docs/Model/V1PropertyGetPost200ResponseProductListInnerMealPlanListInner.md)
+- [V1PropertyGetPost200ResponseProductListInnerPolicyInfo](docs/Model/V1PropertyGetPost200ResponseProductListInnerPolicyInfo.md)
+- [V1PropertyGetPost200ResponseProductListInnerPolicyInfoCancellationPolicyListInner](docs/Model/V1PropertyGetPost200ResponseProductListInnerPolicyInfoCancellationPolicyListInner.md)
+- [V1PropertyGetPost200ResponseProductListInnerRatePlanListInner](docs/Model/V1PropertyGetPost200ResponseProductListInnerRatePlanListInner.md)
+- [V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner](docs/Model/V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner.md)
+- [V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInnerPriceList](docs/Model/V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInnerPriceList.md)
+- [V1PropertyGetPost200ResponseProductListInnerRoomTypeListInner](docs/Model/V1PropertyGetPost200ResponseProductListInnerRoomTypeListInner.md)
+- [V1PropertyGetPost200ResponseProperty](docs/Model/V1PropertyGetPost200ResponseProperty.md)
+- [V1PropertyGetPost200ResponsePropertyAwardListInner](docs/Model/V1PropertyGetPost200ResponsePropertyAwardListInner.md)
+- [V1PropertyGetPost200ResponsePropertyCancellationGracePeriod](docs/Model/V1PropertyGetPost200ResponsePropertyCancellationGracePeriod.md)
+- [V1PropertyGetPost200ResponsePropertyContactListInner](docs/Model/V1PropertyGetPost200ResponsePropertyContactListInner.md)
+- [V1PropertyGetPost200ResponsePropertyContactListInnerAddressListInner](docs/Model/V1PropertyGetPost200ResponsePropertyContactListInnerAddressListInner.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfo](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfo.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInner](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInner.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerAmenityListInner](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerAmenityListInner.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInner](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInner.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInnerRoomAmenityListInner](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInnerRoomAmenityListInner.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInnerTagListInner](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInnerTagListInner.md)
+- [V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMessageListInner](docs/Model/V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInnerMessageListInner.md)
+- [V1PropertyGetPost200ResponsePropertyGeo](docs/Model/V1PropertyGetPost200ResponsePropertyGeo.md)
+- [V1PropertyGetPost200ResponsePropertyGeoDa](docs/Model/V1PropertyGetPost200ResponsePropertyGeoDa.md)
+- [V1PropertyGetPost200ResponsePropertyGeoDe](docs/Model/V1PropertyGetPost200ResponsePropertyGeoDe.md)
+- [V1PropertyGetPost200ResponsePropertyGeoDeLocation](docs/Model/V1PropertyGetPost200ResponsePropertyGeoDeLocation.md)
+- [V1PropertyGetPost200ResponsePropertyGeoEn](docs/Model/V1PropertyGetPost200ResponsePropertyGeoEn.md)
+- [V1PropertyGetPost200ResponsePropertyGeoNl](docs/Model/V1PropertyGetPost200ResponsePropertyGeoNl.md)
+- [V1PropertyGetPost200ResponsePropertyGuestInfo](docs/Model/V1PropertyGetPost200ResponsePropertyGuestInfo.md)
+- [V1PropertyGetPost200ResponsePropertyMediaListInner](docs/Model/V1PropertyGetPost200ResponsePropertyMediaListInner.md)
+- [V1PropertyGetPost200ResponsePropertyMediaListInnerTagListInner](docs/Model/V1PropertyGetPost200ResponsePropertyMediaListInnerTagListInner.md)
+- [V1PropertyGetPost200ResponsePropertyPolicyListInner](docs/Model/V1PropertyGetPost200ResponsePropertyPolicyListInner.md)
+- [V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy](docs/Model/V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy.md)
+- [V1PropertyGetPost200ResponsePropertyPolicyListInnerTaxPolicyListInner](docs/Model/V1PropertyGetPost200ResponsePropertyPolicyListInnerTaxPolicyListInner.md)
+- [V1PropertyGetPost200ResponsePropertyPropertyInfo](docs/Model/V1PropertyGetPost200ResponsePropertyPropertyInfo.md)
+- [V1PropertyGetPost200ResponsePropertyPropertyInfoAcceptedPaymentListInner](docs/Model/V1PropertyGetPost200ResponsePropertyPropertyInfoAcceptedPaymentListInner.md)
+- [V1PropertyGetPost200ResponsePropertyPropertyInfoCategoryListInner](docs/Model/V1PropertyGetPost200ResponsePropertyPropertyInfoCategoryListInner.md)
+- [V1PropertyGetPost200ResponsePropertyPropertyInfoLocation](docs/Model/V1PropertyGetPost200ResponsePropertyPropertyInfoLocation.md)
+- [V1PropertyGetPost200ResponsePropertyPropertyInfoMessageListInner](docs/Model/V1PropertyGetPost200ResponsePropertyPropertyInfoMessageListInner.md)
+- [V1PropertyGetPost200ResponsePropertyRecordCreated](docs/Model/V1PropertyGetPost200ResponsePropertyRecordCreated.md)
+- [V1PropertyGetPost200ResponsePropertyRecordModified](docs/Model/V1PropertyGetPost200ResponsePropertyRecordModified.md)
+- [V1PropertyGetPost200ResponsePropertyServiceListInner](docs/Model/V1PropertyGetPost200ResponsePropertyServiceListInner.md)
+- [V1PropertyGetPost200ResponsePropertyTransaction](docs/Model/V1PropertyGetPost200ResponsePropertyTransaction.md)
+- [V1PropertyGetPost200ResponsePropertyTransactionExternalListInner](docs/Model/V1PropertyGetPost200ResponsePropertyTransactionExternalListInner.md)
+- [V1PropertyListPost200Response](docs/Model/V1PropertyListPost200Response.md)
+- [V1PropertyListPost200ResponseListInner](docs/Model/V1PropertyListPost200ResponseListInner.md)
 
 ## Authorization
 
@@ -160,6 +178,6 @@ support@lodgea.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `1.1.0`
-    - Package version: ``
+- API version: `1.0.2`
+    - Package version: `1.0.2`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
